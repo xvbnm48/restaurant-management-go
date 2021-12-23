@@ -3,10 +3,9 @@ package main
 import (
 	"os"
 
-	"restaurant-management/middleware"
+	middleware "restaurant-management/middleware"
 	routes "restaurant-management/routes"
 
-	"github.com/gin-contrib/sessions/mongo"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -28,6 +27,9 @@ func main() {
 	routes.FoodRoutes(router)
 	routes.InvoiceRoutes(router)
 	routes.MenuRoutes(router)
+	routes.OrderRoutes(router)
+	routes.TableRoutes(router)
+	routes.OrderItemRoutes(router)
 
 	router.Run(":", port)
 
