@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 
+	"restaurant-management/database"
 	middleware "restaurant-management/middleware"
 	routes "restaurant-management/routes"
 
